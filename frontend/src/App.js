@@ -4,6 +4,7 @@ import {
 	Route,
 } from "react-router-dom";
 
+import Home from "./components/Home"
 import Similarity from "./components/Similarity"
 import Ranking from "./components/Ranking"
 
@@ -13,6 +14,7 @@ function App() {
 
         <BrowserRouter>
 			<Switch>
+			<Route path="/" exact component={Home}/>
 				<Route path="/similarity" exact component={Similarity}/>
 				<Route path="/ranking" exact component={Ranking}/>
 			</Switch>

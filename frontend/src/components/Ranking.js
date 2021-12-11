@@ -180,6 +180,7 @@ class Ranking extends React.Component {
     render() {
         return (
             <div className={styles.overall}>
+                <h1>Top Words</h1>
 
                 <div className={styles.spaced_div}>
                 <Box sx={{ minWidth: 120 }}>

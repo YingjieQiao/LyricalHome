@@ -11,3 +11,10 @@
 .spaced_div {
     margin: 10px;
 }
+
+.top {
+    vertical-align: top;
+    display: 'block';
+    width: '100vw';
+    height: '45vw';
+}

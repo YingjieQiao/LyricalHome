@@ -82,7 +82,7 @@ class Similarity extends Component {
     render() {
         return (
             <div className={styles.overall}>
-                <h1>Poem word relationship graph</h1>
+                <h1>Poem Word Relationship Graph</h1>
                 <TextField id="standard-basic" label="Poem word" variant="standard" 
                     onChange={(event) => {this.setState({word: event.target.value})}}
                 />
