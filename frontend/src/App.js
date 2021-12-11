@@ -4,7 +4,7 @@ import {
 	Route,
 } from "react-router-dom";
 
-import Home from "./components/Home"
+import Similarity from "./components/Similarity"
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
         <BrowserRouter>
 			<Switch>
-				<Route path="/" exact component={Home}/>
+				<Route path="/" exact component={Similarity}/>
 			</Switch>
 		</BrowserRouter>
 

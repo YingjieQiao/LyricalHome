@@ -1,5 +1,5 @@
 from logging import debug
-import os, base64
+import os
 from typing import List, Optional
 from collections import Counter, defaultdict
 import thulac
@@ -9,12 +9,24 @@ import multiprocessing
 from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 
-from fastapi import Depends, FastAPI, HTTPException, UploadFile, File, Request, Header
+from fastapi import Depends, FastAPI
 from fastapi.responses import JSONResponse
-from dotenv import load_dotenv
-import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 def word2vec(words_file):
@@ -249,6 +261,10 @@ def get_similar_words(word: str, data=Depends(DI)):
             continue
         res[k] = v
 
+    nodes = {}
+    for node in res.keys():
+        nodes[node] = res[node] * 1000
+
     return JSONResponse(
-        content=res
+        content=nodes
     )
