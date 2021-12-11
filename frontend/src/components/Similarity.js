@@ -98,14 +98,6 @@ class Similarity extends Component {
                     config={this.state.myConfig}
                 />  
     
-                <div className={styles.spaced_div}>
-                    <h1>Poem word relationship graph</h1>
-                </div>
-    
-                <div className={styles.spaced_div}>
-                    <Button variant="outlined" color="primary" onClick={this.graphButtonHandler} >
-                    Generate the information graph!</Button>
-                </div>
             </div>
             
         );

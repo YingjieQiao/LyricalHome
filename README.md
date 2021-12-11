@@ -6,7 +6,7 @@ Qiao Yingjie - 1004514
 
 ## Description
 
-what this is, story
+This is a Data Visulization platform built with React.js, D3.js, FastAPI, empowered with Word2Vec
 
 ## Walkthrough
 

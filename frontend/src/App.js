@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import Similarity from "./components/Similarity"
-
+import Ranking from "./components/Ranking"
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
 
         <BrowserRouter>
 			<Switch>
-				<Route path="/" exact component={Similarity}/>
+				<Route path="/similarity" exact component={Similarity}/>
+				<Route path="/ranking" exact component={Ranking}/>
 			</Switch>
 		</BrowserRouter>
 

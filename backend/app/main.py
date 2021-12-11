@@ -160,10 +160,6 @@ def get_seasons(data=Depends(DI)):
     return JSONResponse(
         content=res
     )
-    
-    return JSONResponse(
-        content=res
-    )
 
 
 @app.get("/colours")
