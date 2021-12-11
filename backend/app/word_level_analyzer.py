@@ -87,47 +87,54 @@ def print_stat_results(char_counter, author_counter, genre_counter, vector_model
       print(k, v)
   # 诗人写作数量排名
   print('\n诗人写作数量排名')
-  print_counter(author_counter.most_common(10))
+  # print_counter(author_counter.most_common(10))
+  # res = author_counter.most_common(10)
+  # print(type(res))
+  # # <class 'list'>
 
-  # 基于字的分析
-  print('\n\n基于字的分析')
-  # 常用字排名
-  print('\n常用字排名')
-  print_counter(char_counter.most_common(12))
-  # 季节排名
-  print('\n季节排名')
-  for c in ['春', '夏', '秋', '冬']:
-    print(c, char_counter[c])
-  # 颜色排名
-  print('\n颜色排名')
-  colors = ['红', '白', '青', '蓝', '绿', '紫', '黑', '黄']
-  for c in colors:
-    print(c, char_counter[c])
-  # 植物排名
-  print('\n植物排名')
-  plants = ['梅', '兰', '竹', '菊', '松', '柳', '枫', '桃', '梨', '杏']
-  for p in plants:
-    print(p, char_counter[p])
-  # 动物排名
-  print('\n动物排名')
-  age_animals = ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪']
-  for a in age_animals:
-    print(a, char_counter[a])
+  # # 基于字的分析
+  # print('\n\n基于字的分析')
+  # # 常用字排名
+  # print('\n常用字排名')
+  # # print_counter(char_counter.most_common(12))
+  # res = char_counter.most_common(12)
+  # for i in res:
+  #   print(res)
+  # print(type(res))
+  # # 季节排名
+  # print('\n季节排名')
+  # for c in ['春', '夏', '秋', '冬']:
+  #   print(c, char_counter[c])
+  # # 颜色排名
+  # print('\n颜色排名')
+  # colors = ['红', '白', '青', '蓝', '绿', '紫', '黑', '黄']
+  # for c in colors:
+  #   print(c, char_counter[c])
+  # # 植物排名
+  # print('\n植物排名')
+  # plants = ['梅', '兰', '竹', '菊', '松', '柳', '枫', '桃', '梨', '杏']
+  # for p in plants:
+  #   print(p, char_counter[p])
+  # # 动物排名
+  # print('\n动物排名')
+  # age_animals = ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪']
+  # for a in age_animals:
+  #   print(a, char_counter[a])
 
-  # 基于词的分析
-  print('\n\n基于词的分析')
-  # 地名排名
-  print('\n地名词排名')
-  print_counter(genre_counter['ns'].most_common(10))
-  # 时间排名
-  print('\n时间词排名')
-  print_counter(genre_counter['t'].most_common(10))
-  # 场景排名
-  print('\n场景词排名')
-  print_counter(genre_counter['s'].most_common(10))
+  # # 基于词的分析
+  # print('\n\n基于词的分析')
+  # # 地名排名
+  # print('\n地名词排名')
+  # print_counter(genre_counter['ns'].most_common(10))
+  # # 时间排名
+  # print('\n时间词排名')
+  # print_counter(genre_counter['t'].most_common(10))
+  # # 场景排名
+  # print('\n场景词排名')
+  # print_counter(genre_counter['s'].most_common(10))
 
 
-  # 基于词向量的分析
+  # # 基于词向量的分析
   print('\n\n基于词向量的分析')
   # print(vector_model['今日'])
   def print_similar_words(word):
@@ -136,6 +143,7 @@ def print_stat_results(char_counter, author_counter, genre_counter, vector_model
 
   print_similar_words('天子')
   print_similar_words('寂寞')
+  print_similar_words('红楼')
 
 
 def main():
@@ -155,6 +163,7 @@ def main():
   vector_model = word2vec(args.words_path)
 
   print_stat_results(char_counter, author_counter, genre_counter, vector_model)
+  
 
 
 if __name__ == '__main__':
