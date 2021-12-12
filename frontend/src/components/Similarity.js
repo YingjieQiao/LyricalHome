@@ -26,7 +26,7 @@ class Similarity extends Component {
                 link: {
                     highlightColor: "lightblue",
                 },
-                height: 1500,
+                height: 1000,
                 width: 1500
             },
 

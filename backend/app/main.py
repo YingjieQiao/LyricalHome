@@ -264,3 +264,6 @@ def get_similar_words(word: str, data=Depends(DI)):
     return JSONResponse(
         content=nodes
     )
+
+
+# uvicorn main:app --host 0.0.0.0 --reload
