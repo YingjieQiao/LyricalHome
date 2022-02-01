@@ -13,11 +13,6 @@ Deep learning model based on Word2Vec that powers the word relationship interfer
 Web Data Visualization platform using FastAPI, React.js, and D3.js, and Material UI.
 
 
-## Walkthrough
-
-Demo Video: https://www.youtube.com/watch?v=bp7vnyq1eAQ
-
-
 ## Local Development
 
 1. install dependencies:
